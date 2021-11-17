@@ -11,9 +11,9 @@
 //necesariosos 
 
 function año(año:number,mes:number,dia:number) {
-  let sumaraños:any[]=new Array(1);
-  let sumarmeses:any[]=new Array(1);
-  let sumardia:any[]=new Array(1);
+  let sumaraños:SVGAnimatedEnumeration[]=new Array(1);
+  let sumarmeses:SVGAnimatedEnumeration[]=new Array(1);
+  let sumardia:SVGAnimatedEnumeration[]=new Array(1);
   for (let index = 0; index < sumaraños.length; index++) {
    
     if (año%4===0&&año%100===0&&año%400===0) {
@@ -44,22 +44,25 @@ console.log(sumarmeses);
 sumarmeses[index]=29;
         console.log(sumarmeses);
 
-} else {
+} else (mes===2);  
   sumarmeses[index]=28;
   console.log(sumarmeses);
 
 }
-  }for (let index = 0; index < sumardia.length; index++) {
-    sumardia[index]=(año-mes-dia);
-   console.log(sumardia);
+  
+  
+  for (let index = 0; index < sumardia.length; index++) {
+    sumardia[index]=(año-mes-dia)
+   console.log(sumardia)
     
   }
+ 
+  return año;
+  
+  } 
+ 
 
-  return año
-} 
-
-
-año(2020,2,13);
+año(2020,12,22);
 console.log(año);
 
 
